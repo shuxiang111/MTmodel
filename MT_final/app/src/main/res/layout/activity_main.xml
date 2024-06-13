@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MT_final"
+    tools:context=".MainActivity">
+
+    <!-- 文本编辑框 -->
+
+    <!-- 翻译按钮 -->
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/purtra" />
+
+    <EditText
+        android:id="@+id/editForm1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:hint="Enter text to translate..."
+        android:inputType="textMultiLine"
+        android:minLines="3" />
+
+    <Button
+        android:id="@+id/TranslateBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editForm1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#F67EF0"
+        android:text="翻译" />
+
+    <!-- 重启按钮 -->
+
+    <!-- 分段按钮 -->
+
+    <!-- 显示翻译结果的文本视图 -->
+
+    <TextView
+        android:id="@+id/viewForm1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/TranslateBtn1"
+        android:layout_marginTop="68dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入待翻译文段："
+        android:layout_gravity="center"
+        android:textColor="#4D15AF"
+        android:visibility="visible" />
+
+</RelativeLayout>
