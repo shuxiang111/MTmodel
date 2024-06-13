@@ -1,4 +1,4 @@
-# MT模型移动部署工作 🌟
+# MT翻译模型移动部署工作 🌟
 
 <img src='https://github.com/shuxiang111/MTmodel/blob/main/sources/MT_final.jpg' width=400 height=150>
 
@@ -35,11 +35,8 @@
 ## Jupyter Notebook 翻译示例
 本项目使用huggingface中的Helsinki-NLP/opus-mt-en-zh翻译模型，在此提供于Jupyter Notebook使用此模型的一个[翻译示例](MT_final.ipynb)。
 
-
-## 备注
-该 README.md 文档提供了项目的基本信息和主要目标，可以根据实际情况进一步添加详细的说明、步骤和注意事项。
-
-
+## UI界面展示
+<img src='https://github.com/shuxiang111/MTmodel/blob/main/sources/MT_final.jpg'>
 
 
 # 用户需求文档
