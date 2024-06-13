@@ -36,7 +36,7 @@
 本项目使用huggingface中的Helsinki-NLP/opus-mt-en-zh翻译模型，在此提供于Jupyter Notebook使用此模型的一个[翻译示例](MT_final.ipynb)。
 
 ## UI界面展示
-<img src='https://github.com/shuxiang111/MTmodel/blob/main/sources/MT_final.jpg'>
+<img src='https://github.com/shuxiang111/MTmodel/blob/main/sources/UI%E7%95%8C%E9%9D%A2.png' width=200 height=400>
 
 
 # 用户需求文档
