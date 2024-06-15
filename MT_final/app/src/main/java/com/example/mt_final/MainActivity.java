@@ -96,18 +96,24 @@ public class MainActivity extends AppCompatActivity {
         JSONObject idx2word = jl.jsonloader(getApplicationContext(), "idx2word.json");
 
         ArrayList<Long> inputs = Tokenization.Tokenize(text, word2idx);
-
-        assert inputs != null;
-        FloatBuffer resultBuffer = myTranslator.runModule(inputs, inputs.size(), config.BOS_TOKEN);
-
+        System.out.println(inputs);
         ArrayList<Integer> results = new ArrayList<>();
-        for (int i = 0; i < config.MAX_LENGTH; i++) {
+
+        for (int i = 0; i < inputs.size(); i++) {
+            Long num = inputs.get(i);
+            ArrayList<Long> inputs2 = new ArrayList<>();
+            inputs2.add(num);
+            System.out.println("inputs2是: "+inputs2);
+            FloatBuffer resultBuffer = myTranslator.runModule(inputs2, inputs2.size(), config.BOS_TOKEN);
             int nextToken = myTranslator.generate(resultBuffer);
             if (nextToken == config.EOS_TOKEN) {
                 break;
             }
+            System.out.println("nextToken是: "+nextToken);
             results.add(nextToken);
+
         }
+        System.out.println(results);
 
         StringBuilder translation = new StringBuilder();
         try {

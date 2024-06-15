@@ -74,6 +74,7 @@ public class Translator {
         OnnxTensor attn_maskTensor;
         OnnxTensor dec_input_idsTensor;
         OnnxTensor dec_attn_maskTensor;
+
         try {
 
             inputTensor = OnnxTensor.createTensor(
@@ -118,7 +119,7 @@ public class Translator {
             Log.e(TAG,"get value of result failed");
             return null;
         }
-
+        System.out.println("Result length: " + result.length);
         return FloatBuffer.wrap(result);
     }
 
@@ -130,16 +131,17 @@ public class Translator {
         }
 
         float[] probs = resultBuffer.array();
-        float max_prob = probs[0];
-        int idx = 0;
-
-        for (int i = 1; i < probs.length; i++)
+        float max_prob = probs[1];
+        int idx = 9;
+        for (int i = 10; i < probs.length; i++)
         {
             if(probs[i] > max_prob)
             {
-                max_prob = probs[i];
                 idx = i;
+                max_prob = probs[i];
+                System.out.println(idx);
             }
+
         }
         return idx;
     }
